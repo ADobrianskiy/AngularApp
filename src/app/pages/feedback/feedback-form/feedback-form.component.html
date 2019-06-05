@@ -1,0 +1,25 @@
+<form class="feedback-form"
+      [formGroup]="feedbackFrom"
+      (ngSubmit)="submitForm()"
+>
+    <label class="feedback-form__title">
+        Leave Your Feedback
+    </label>
+    <div class="feedback-form__body">
+        <mat-form-field floatLabel="auto">
+            <mat-label>Your name</mat-label>
+            <input matInput formControlName="name" required>
+        </mat-form-field>
+        <mat-form-field floatLabel="auto">
+            <mat-label>Your email</mat-label>
+            <input matInput formControlName="email" required>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="auto">
+            <mat-label>Your Feedback</mat-label>
+            <textarea matInput formControlName="feedbackText"></textarea>
+        </mat-form-field>
+    </div>
+
+    <button mat-button color="primary" type="submit">Submit</button>
+</form>

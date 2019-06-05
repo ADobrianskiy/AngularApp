@@ -5,14 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { HomeComponent } from './pages/home/home.component';
-import { MatButtonModule, MatIconModule, MatMenuModule } from '@angular/material';
+import {
+    MatButtonModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatMenuModule,
+    MatProgressSpinnerModule
+} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FeedbackFormComponent } from './pages/feedback/feedback-form/feedback-form.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         FeedbackComponent,
-        HomeComponent
+        HomeComponent,
+        FeedbackFormComponent
     ],
     imports: [
         BrowserModule,
@@ -20,7 +30,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatMenuModule,
         MatIconModule,
         BrowserAnimationsModule,
-        MatButtonModule
+        MatButtonModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatProgressSpinnerModule
     ],
     providers: [],
     bootstrap: [AppComponent]

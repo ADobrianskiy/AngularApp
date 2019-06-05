@@ -1,3 +1,12 @@
-<p>
-  feedback works!
-</p>
+<div class="feedback-content">
+    <app-feedback-form *ngIf="showFeedbackForm" (onSubmit)="onSubmit($event)"></app-feedback-form>
+
+    <mat-spinner class="feedback-content__preloader" *ngIf="showPreloader"></mat-spinner>
+
+    <div
+        class="success-message"
+        *ngIf="showSuccessMessage"
+    >
+        {{userName}}, thank you for your feedback!
+    </div>
+</div>

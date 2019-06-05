@@ -1,0 +1,14 @@
+@import 'variables';
+
+.feedback-form {
+    > .feedback-form__title {
+        font-size: $title-font-size;
+        margin-bottom: 10px;
+    }
+
+    > .feedback-form__body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
