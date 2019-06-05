@@ -1,0 +1,12 @@
+@import "variables";
+
+$iframeW: calc(100vw - #{$main-content-margin * 2});
+$iframeH: calc((100vw - 15px) * 720 / 1280);
+.iframe-container {
+    margin: auto;
+
+    iframe {
+        width: $iframeW;
+        height: $iframeH;
+    }
+}

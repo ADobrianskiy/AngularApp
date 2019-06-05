@@ -8,10 +8,16 @@
 
     .app-header__item {
         border-radius: 0;
-        font-size: $menu-font-size;
+        font-size: mat-font-size($config, 'title');
 
         &:hover {
             box-shadow: 0 1px 0 0 $dark-primary-text;
         }
     }
+}
+
+.app-body {
+    margin: $main-content-margin;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

@@ -1,8 +1,16 @@
+@import '~@angular/material/theming';
+@import 'variables';
+
 .feedback-content {
     width: 500px;
     margin: auto;
 
     .feedback-content__preloader {
         margin: auto;
+    }
+
+    .feedback-content__success-msg {
+        font-size: mat-font-size($config, 'subheading-1');
+        text-align: center;
     }
 }

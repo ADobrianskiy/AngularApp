@@ -15,7 +15,7 @@ import {
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FeedbackFormComponent } from './pages/feedback/feedback-form/feedback-form.component';
+import { FeedbackFormComponent } from './pages/feedback/components/feedback-form/feedback-form.component';
 
 @NgModule({
     declarations: [
