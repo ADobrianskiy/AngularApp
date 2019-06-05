@@ -1,2 +1,15 @@
 @import '~@angular/material/theming';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.app-header {
+    display: flex;
+    justify-content: center;
+
+    .app-header__item {
+        border-radius: 0;
+
+        &:hover {
+            box-shadow: 0 1px 0 0 $dark-primary-text;
+        }
+    }
+}
