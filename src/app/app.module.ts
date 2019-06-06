@@ -16,6 +16,10 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FeedbackFormComponent } from './pages/feedback/components/feedback-form/feedback-form.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { FeedbackEffects } from './pages/feedback/reducers/feedback.effects';
 
 @NgModule({
     declarations: [
@@ -34,7 +38,11 @@ import { FeedbackFormComponent } from './pages/feedback/components/feedback-form
         ReactiveFormsModule,
         MatFormFieldModule,
         MatInputModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        StoreModule.forRoot(reducers),
+        EffectsModule.forRoot([
+            FeedbackEffects
+        ]),
     ],
     providers: [],
     bootstrap: [AppComponent]

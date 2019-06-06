@@ -1,12 +1,12 @@
 <div class="feedback-content">
-    <app-feedback-form *ngIf="showFeedbackForm" (onSubmit)="onSubmit($event)"></app-feedback-form>
+    <app-feedback-form *ngIf="showFeedbackForm$ | async" (onSubmit)="onSubmit($event)"></app-feedback-form>
 
-    <mat-spinner class="feedback-content__preloader" *ngIf="showPreloader"></mat-spinner>
+    <mat-spinner class="feedback-content__preloader" *ngIf="showPreloader$ | async"></mat-spinner>
 
     <div
         class="feedback-content__success-msg"
-        *ngIf="showSuccessMessage"
+        *ngIf="showSuccessMessage$ | async"
     >
-        {{userName}}, thank you for your feedback!
+        {{userName$ | async}}, thank you for your feedback!
     </div>
 </div>
